@@ -32,4 +32,24 @@ public class GradeServiceImpl implements GradeService {
     public List<Map<String, Object>> getGradeRanking(Integer courseId) {
         return gradeMapper.getGradeRanking(courseId);
     }
+    @Override
+    public Double getTotalScoreByStudentId(Integer studentId) {
+        return gradeMapper.getTotalScoreByStudentId(studentId);
+    }
+
+    @Override
+    public List<Map<String, Object>> getSubjectScoresByStudentId(Integer studentId) {
+        return gradeMapper.getSubjectScoresByStudentId(studentId);
+    }
+
+    @Override
+    public List<Map<String, Object>> getSubjectScoresForPieChart(Integer studentId) {
+        return gradeMapper.getSubjectScoresByStudentId(studentId);
+    }
+
+    @Override
+    public List<Map<String, Object>> getAllStudentRanks() {
+        return gradeMapper.getAllStudentTotalScoresWithRank();
+    }
+
 }

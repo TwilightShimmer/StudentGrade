@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.management-section {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.management-section h2 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.management-section a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.management-section a:hover {
+    text-decoration: underline;
+}

@@ -26,10 +26,10 @@
                 <td>${grade.courseId}</td>
                 <td>${grade.score}</td>
                 <td>
-                    <form action="${pageContext.request.contextPath}/teacher/editGrade/${grade.gradeId}" method="get" style="display: inline;">
+                    <form action="${pageContext.request.contextPath}/admin/editGrade/${grade.gradeId}" method="get" style="display: inline;">
                         <button type="submit">编辑</button>
                     </form>
-                    <form action="${pageContext.request.contextPath}/teacher/deleteGrade/${grade.gradeId}" method="post" onsubmit="return confirmDelete()">
+                    <form action="${pageContext.request.contextPath}/admin/deleteGrade/${grade.gradeId}" method="post" onsubmit="return confirmDelete()">
                         <input type="hidden" name="teacherId" value="${teacherId}">
                         <button type="submit">删除</button>
                     </form>
@@ -44,7 +44,7 @@
 <c:if test="${empty grades}">
     <p>没有学生成绩信息。</p>
 </c:if>
-<a href="${pageContext.request.contextPath}/teacher/addGrade/${teacherId}">新增学生成绩</a>
+<a href="${pageContext.request.contextPath}/admin/addGrade/${teacherId}">新增学生成绩</a>
 </body>
 </html>
 <script>

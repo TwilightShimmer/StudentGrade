@@ -5,7 +5,7 @@
 </head>
 <body>
 <h2>添加学生成绩</h2>
-<form action="${pageContext.request.contextPath}/teacher/saveGrade" method="post">
+<form action="${pageContext.request.contextPath}/admin/saveGrade" method="post">
     <input type="hidden" name="courseId" value="${teacherId}">
 
     <div>
@@ -19,7 +19,7 @@
     </div>
 
     <button type="submit">提交</button>
-    <a href="${pageContext.request.contextPath}/teacher/manageStudents/${teacherId}">返回</a>
+    <a href="${pageContext.request.contextPath}/admin/manageStudents/${teacherId}">返回</a>
 </form>
 </body>
 </html>

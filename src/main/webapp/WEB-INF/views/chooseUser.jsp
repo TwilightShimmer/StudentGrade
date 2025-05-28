@@ -11,7 +11,7 @@
     <input type="submit" value="学生页面">
 </form>
 <form action="${pageContext.request.contextPath}/user/getAllTeachersInfo" method="get">
-    <input type="submit" value="教师页面">
+    <input type="submit" value="管理员页面">
 </form>
 </body>
 </html>

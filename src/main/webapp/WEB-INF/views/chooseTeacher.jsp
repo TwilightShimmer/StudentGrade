@@ -4,10 +4,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>教师信息</title>
+    <title>管理员信息</title>
 </head>
 <body>
-<h1>教师信息</h1>
+<h1>管理员信息</h1>
 <c:if test="${not empty list}">
     <table border="1">
         <thead>
@@ -18,12 +18,12 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${list}" var="teacher">
+        <c:forEach items="${list}" var="admin">
             <tr>
-                <td>${teacher.teacherName}</td>
-                <td>${teacher.teacherId}</td>
+                <td>${admin.teacherName}</td>
+                <td>${admin.teacherId}</td>
                 <td>
-                    <a href="${pageContext.request.contextPath}/teacher/manageStudents/${teacher.teacherId}">管理学生成绩</a>
+                    <a href="${pageContext.request.contextPath}/admin/manageStudents/${admin.teacherId}">管理学生成绩</a>
                 </td>
             </tr>
         </c:forEach>
@@ -31,7 +31,7 @@
     </table>
 </c:if>
 <c:if test="${empty list}">
-    <p>没有教师信息。</p>
+    <p>没有管理员信息。</p>
 </c:if>
 </body>
 </html>

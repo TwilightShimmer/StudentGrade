@@ -7,7 +7,7 @@
 </head>
 <body>
 <h2>编辑学生成绩</h2>
-<form action="${pageContext.request.contextPath}/teacher/updateGrade" method="post">
+<form action="${pageContext.request.contextPath}/admin/updateGrade" method="post">
     <input type="hidden" name="gradeId" value="${grade.gradeId}">
 
     <div>
@@ -26,7 +26,7 @@
     </div>
 
     <button type="submit">保存</button>
-    <a href="${pageContext.request.contextPath}/teacher/manageStudents/${grade.courseId}">取消</a>
+    <a href="${pageContext.request.contextPath}/admin/manageStudents/${grade.courseId}">取消</a>
 </form>
 </body>
 </html>

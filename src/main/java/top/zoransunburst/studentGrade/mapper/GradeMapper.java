@@ -22,5 +22,20 @@ public interface GradeMapper {
             "FROM grades " +
             "WHERE course_id = #{courseId}")
     List<Map<String, Object>> getGradeRanking(Integer courseId);
+    @Select("SELECT SUM(score) AS totalScore FROM grades WHERE student_id = #{studentId}")
+    Double getTotalScoreByStudentId(Integer studentId);
 
+    @Select("SELECT c.course_name, g.score " +
+            "FROM grades g " +
+            "JOIN courses c ON g.course_id = c.course_id " +
+            "WHERE g.student_id = #{studentId}")
+    List<Map<String, Object>> getSubjectScoresByStudentId(Integer studentId);
+
+    @Select("SELECT s1.student_id, SUM(s1.score) AS total_score, " +
+            "RANK() OVER (ORDER BY SUM(s1.score) DESC) AS `rank` " +
+            "FROM grades s1 GROUP BY s1.student_id")
+    List<Map<String, Object>> getAllStudentTotalScoresWithRank();
+
+    @Select("SELECT c.course_name, g.score FROM grades g JOIN courses c ON g.course_id = c.course_id WHERE g.student_id = #{studentId}")
+    List<Map<String, Object>> getSubjectScoresForPieChart(Integer studentId);
 }
